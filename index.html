@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Harry Potter Quiz</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Julius+Sans+One|Oswald" rel="stylesheet">
+  </head>
+  <body>
+    <div class="startPage">
+      <header role="banner">
+        <h1>Harry Potter Quiz</h1>
+        <h2>Would You Be Able To Defeat The Dark Lord?</h2>
+        <button type="submit" class="nextQuestion">Wands Ready!</button>
+      </header >
+    </div>  
+    <hr width="100%">
+    <div class="questionPage">
+      <h2>Question Goes Here</h2>
+      <form role="form" accept-charset="UTF-8">
+        <fieldset>
+          <label>
+            <input type="radio" class="answer" name="option" value="${STORE[questionNumber-1].answer1}"/>
+            Answer 1<br>
+          </label>
+          <label>
+            <input type="radio" class="answer" name="option" value="${STORE[questionNumber-1].answer2}"/>
+            Answer 2<br>
+          </label>
+          <label>
+            <input type="radio" class="answer" name="option" value="${STORE[questionNumber-1].answer3}"/> 
+            Answer 3<br>
+          </label>  
+          <label>
+            <input type="radio" class="answer" name="option" value="${STORE[questionNumber-1].answer4}"/> 
+            Answer 4<br>
+          </label> 
+        </fieldset>
+      </form>
+      <button type="submit" class="getResults">Submit</button>
+    </div>  
+    <hr width="100%">
+    <div class="questionResultsPage">
+      <h1>You Got That One Right!</h1>
+      <p class="resultsPhoto">Photo Goes Here</p>
+      <button type="submit" class="nextQuestion">Next Question</button>
+    <footer>
+      <p>Question 2 / 10</p>
+      <p>Score: 2</p>  
+    </div> 
+    <hr width="100%">
+    <div class="finalResultsPage">
+      <h1>Congratulations You Are The Chosen One!</h1>
+      <h2>You got 5 / 10 Questions Right</h2>
+      <p class="resultsPhoto">Photo Goes Here</p>
+      <button type="submit" class="restartQuiz">Restart Quiz</button>
+    </div>  
+    <hr width="100%"> 
+    <script
+    src="https://code.jquery.com/jquery-3.4.0.min.js"
+    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+    crossorigin="anonymous"></script>
+    <script src="store.js"></script>
+    <script src="script.js"></script>  
+  </body>
+</html>
